@@ -15,15 +15,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
-# Install Python dependencies
-COPY requirements.txt .
-COPY meta_model_artifacts /app/meta_model_artifacts/
+COPY api/requirements.txt .
+COPY api/meta_model_artifacts /app/meta_model_artifacts/
 RUN pip install uv && \
     uv pip install --system --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY main.py .
-COPY database.py .
+COPY api/main.py .
+COPY api/database.py .
+COPY config/ /app/config/
 
 # Expose the port the app runs on
 EXPOSE ${PORT}
