@@ -3,12 +3,12 @@
   "media_types": {
     "image": {
       "model_endpoints": {
-        "npr_deepfakedetection": "http://npr_deepfakedetection:5001/predict",
-        "universalfakedetect": "http://universalfakedetect:5004/predict"
+        "npr_deepfakedetection": "http://deepsafe.railway.internal:5001/predict",
+        "universalfakedetect": "http://wholesome-alignment.railway.internal:5004/predict"
       },
       "health_endpoints": {
-        "npr_deepfakedetection": "http://npr_deepfakedetection:5001/health",
-        "universalfakedetect": "http://universalfakedetect:5004/health"
+        "npr_deepfakedetection": "http://deepsafe.railway.internal:5001/health",
+        "universalfakedetect": "http://wholesome-alignment.railway.internal:5004/health"
       },
       "supported_extensions": [
         "*.jpg",
