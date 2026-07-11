@@ -5,9 +5,9 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "fastapi>=0.100.0",
+                "fastapi==0.103.1",
         "uvicorn>=0.22.0",
-        "pydantic>=2.0.0",
+                "pydantic==2.4.2",
         "pyyaml>=6.0",
         "Pillow>=9.0.0",
     ],
