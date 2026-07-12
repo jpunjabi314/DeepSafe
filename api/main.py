@@ -12,6 +12,7 @@ Architectural Overview:
 - **Meta-Learning**: Dynamically loads and applies modality-specific stacking models (meta-learners) to improve prediction accuracy.
 - **Microservice Communication**: Dispatches parallel requests to isolated model containers, ensuring fault isolation and scalability.
 
+# redeploy trigger
 Configuration:
 Driven by `deepsafe_config.json`, allowing for dynamic registration of new model endpoints without code changes.
 """
@@ -1383,3 +1384,4 @@ if __name__ == "__main__":
         log_level=log_level,
         reload=False,
     )
+# redeploy trigger
