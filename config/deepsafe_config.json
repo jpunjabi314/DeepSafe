@@ -21,7 +21,7 @@
     }
   },
   "default_output_dir_base": "./deepsafe_test_results",
-  "default_threshold": 0.5,
+  "default_threshold": 0.01,
   "default_ensemble_method": "average",
   "default_api_timeout_seconds": 90,
   "default_model_timeout_seconds_video": 1800,
