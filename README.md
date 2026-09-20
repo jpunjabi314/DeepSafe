@@ -9,6 +9,25 @@
 [![Dataset on HF](https://img.shields.io/badge/HuggingFace-Dataset-orange)](https://huggingface.co/datasets/siddharthksah/DeepSafe-benchmark)
 [![Weights on HF](https://img.shields.io/badge/HuggingFace-Weights-orange)](https://huggingface.co/siddharthksah/deepsafe-weights)
 
+> ### Does any of this actually work?
+>
+> We ran 24 detectors against 411 AI generators to find out. They catch
+> **66.2% of fakes**, and only **7% of Sora video**.
+>
+> That work lives in **[deepsafe-bench](https://github.com/deepsafehq/deepsafe-bench)**:
+> a benchmark, model zoo and adaptation toolkit, with the full results, the
+> evaluation corpus, and a `pip install` that reproduces every number without
+> a GPU.
+>
+> ```bash
+> pip install deepsafe-bench
+> deepsafe eval --baseline ensemble --modality video
+> ```
+>
+> This repository remains the original MIT-licensed detection platform and is
+> unchanged. deepsafe-bench is a separate, newer project under a
+> non-commercial licence.
+
 DeepSafe is a modular platform that combines multiple state-of-the-art deepfake detection models into a single ensemble system. Each model runs in its own Docker container. A central API gateway orchestrates requests, dispatches them to model services, and fuses results using voting, averaging, or a trained stacking meta-learner.
 
 **Add a new model in minutes, retrain the ensemble in one command.**
